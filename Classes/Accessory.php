@@ -1,4 +1,5 @@
 <?php
+    include_once __DIR__ . '/Product.php';
     class Accessory extends Product{
         protected $color;
         protected $size;
