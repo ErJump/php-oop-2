@@ -5,6 +5,7 @@
         protected $name;
         protected $surname;
         protected $address;
+        protected $cart = [];
         protected $discountPercentage = 0;
 
         public function __construct($_email, $_name, $_surname, $_address){
@@ -52,5 +53,13 @@
 
         public function setDiscountPercentage($_discountPercentage){
             $this->discountPercentage = $_discountPercentage;
+        }
+
+        public function getCart(){
+            return $this->cart;
+        }
+
+        public function addItemsToCart($item){
+            $this->cart[] = $item;
         }
     }
