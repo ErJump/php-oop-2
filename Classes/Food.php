@@ -1,6 +1,8 @@
 <?php
     include_once __DIR__ . '/Product.php';
+    include_once __DIR__ . '../Traits/Seasonal.php';
     class Food extends Product{
+        use Seasonal;
         protected $expirationDate;
         protected $ingredients;
         protected $weight;
