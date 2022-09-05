@@ -7,7 +7,7 @@
 
         public function __construct($_cardNumber, $_expirationDate, $_cvv, $_owner){
             $this->cardNumber = $_cardNumber;
-            $this->expirationDate = $_expirationDate;
+            $this->setExpirationDate($_expirationDate);
             $this->cvv = $_cvv;
             $this->owner = $_owner;
         }
