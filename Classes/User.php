@@ -1,27 +1,17 @@
 <?php
     class User{
-        protected $username;
-        protected $password;
+
         protected $email;
         protected $name;
         protected $surname;
         protected $address;
+        protected $discountPercentage = 0;
 
-        public function __construct($_username, $_password, $_email, $_name, $_surname, $_address){
-            $this->username = $_username;
-            $this->password = $_password;
+        public function __construct($_email, $_name, $_surname, $_address){
             $this->email = $_email;
             $this->name = $_name;
             $this->surname = $_surname;
             $this->address = $_address;
-        }
-
-        public function getUsername(){
-            return $this->username;
-        }
-
-        public function getPassword(){
-            return $this->password;
         }
 
         public function getEmail(){
@@ -40,14 +30,6 @@
             return $this->address;
         }
 
-        public function setUsername($_username){
-            $this->username = $_username;
-        }
-
-        public function setPassword($_password){
-            $this->password = $_password;
-        }
-
         public function setEmail($_email){
             $this->email = $_email;
         }
@@ -62,5 +44,13 @@
 
         public function setAddress($_address){
             $this->address = $_address;
+        }
+
+        public function getDiscountPercentage(){
+            return $this->discountPercentage;
+        }
+
+        public function setDiscountPercentage($_discountPercentage){
+            $this->discountPercentage = $_discountPercentage;
         }
     }
